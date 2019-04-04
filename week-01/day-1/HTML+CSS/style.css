@@ -1,0 +1,73 @@
+html {
+    display: block;
+}
+
+head {
+    display: none;
+}
+
+body {
+    background-color: black;
+    background-image: url(Assets/topography/topography.png);
+    background-attachment: fixed;
+    color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-position: center center;
+    margin: 0px;
+    display: block;
+}
+
+header {
+    background-color: rgb(51, 51, 51);
+}
+
+header::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    font-size: 22px;
+    line-height: 30px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: justify;
+}
+
+div {
+    display: block;
+}
+
+
+.separator {
+    font-size: 22px;
+    line-height: 30px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    margin: 40px auto;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+h1 {
+    font-size: 22px;
+    font-family: serif;
+    text-align: left;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 16px;
+    font-family: serif;
+    text-align: left;
+    font-weight: 600;
+}
+
