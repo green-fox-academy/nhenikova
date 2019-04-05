@@ -1,17 +1,17 @@
 public class Swap {
     public static void main(String[] args) {
-            // Swap the values of the variables
-            int a = 123;
-            int b = 526;
-     //before swapping
+        // Swap the values of the variables
+        int a = 123;
+        int b = 526;
+        //before swapping
         System.out.println(a);
         System.out.println(b);
 
         int c = a;
-            a = b;
-            b = c;
+        a = b;
+        b = c;
 
-    //after swapping
+        //after swapping
         System.out.println(a);
         System.out.println(b);
     }
