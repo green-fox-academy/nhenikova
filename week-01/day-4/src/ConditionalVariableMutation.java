@@ -60,7 +60,7 @@ public class ConditionalVariableMutation {
         // if time is more than 200
         // set out3 to "Time out"
         // otherwise set out3 to "Run Forest Run!"
-        
+
         System.out.println(out3);
     }
 
