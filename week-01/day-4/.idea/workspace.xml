@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dba0bc5b-7e66-46d0-a291-5987c7680ffd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/AppendAFunc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Doubling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Factorio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Greet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/ChangeElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Colors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/CompareLength.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/DoubleItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Matrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/PrintAll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/PrintElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/SumElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Third.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
