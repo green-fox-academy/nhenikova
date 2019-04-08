@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dba0bc5b-7e66-46d0-a291-5987c7680ffd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DrawChessTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawDiagonal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GuessTheNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ParametricAvarage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/AppendAFunc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Doubling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Factorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Greet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Sum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,35 +23,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DrawDiagonal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DrawChessTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ParametricAvarage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="442" />
     <option name="y" value="57" />
     <option name="width" value="896" />
@@ -123,9 +96,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JAVA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="day-4" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,17 +190,19 @@
       <option name="presentableId" value="Default" />
       <updated>1554377721086</updated>
       <workItem from="1554377722479" duration="49380000" />
-      <workItem from="1554642199022" duration="17778000" />
+      <workItem from="1554642199022" duration="18239000" />
+      <workItem from="1554717227513" duration="190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67158000" />
+    <option name="totallyTimeSpent" value="67809000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="442" y="57" width="896" height="761" extended-state="0" />
+    <frame x="442" y="57" width="896" height="761" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20608899" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21077283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -226,7 +211,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3348281" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3348281" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39941263" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,7 +519,7 @@
     <entry file="file://$PROJECT_DIR$/src/ParametricAvarage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -548,7 +533,7 @@
     <entry file="file://$PROJECT_DIR$/src/DrawDiagonal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
