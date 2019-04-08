@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dba0bc5b-7e66-46d0-a291-5987c7680ffd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DrawDiamond.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawPyramid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawTriangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DrawChessTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DrawDiagonal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GuessTheNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ParametricAvarage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,19 +24,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DrawSquare.java">
+        <entry file="file://$PROJECT_DIR$/src/DrawDiagonal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="360">
+              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DrawPyramid.java">
+        <entry file="file://$PROJECT_DIR$/src/DrawChessTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="97">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ParametricAvarage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -95,12 +104,16 @@
         <option value="$PROJECT_DIR$/src/DrawPyramid.java" />
         <option value="$PROJECT_DIR$/src/DrawDiamond.java" />
         <option value="$PROJECT_DIR$/src/DrawSquare.java" />
+        <option value="$PROJECT_DIR$/src/GuessTheNumber.java" />
+        <option value="$PROJECT_DIR$/src/DrawDiagonal.java" />
+        <option value="$PROJECT_DIR$/src/DrawChessTable.java" />
+        <option value="$PROJECT_DIR$/src/ParametricAvarage.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="495" />
-    <option name="y" value="142" />
+    <option name="x" value="442" />
+    <option name="y" value="57" />
     <option name="width" value="896" />
     <option name="height" value="761" />
   </component>
@@ -111,22 +124,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day-4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day-4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -152,16 +150,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DrawSquare">
-    <configuration name="DrawDiamond" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DrawDiamond" />
+  <component name="RunManager" selected="Application.DrawChessTable">
+    <configuration name="DrawChessTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DrawChessTable" />
       <module name="JAVA" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawPyramid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DrawPyramid" />
+    <configuration name="DrawDiagonal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DrawDiagonal" />
+      <module name="JAVA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DrawDiamond" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DrawDiamond" />
       <module name="JAVA" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,15 +179,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DrawTriangle" />
-      <module name="JAVA" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FizzBuzz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FizzBuzz" />
+    <configuration name="GuessTheNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GuessTheNumber" />
       <module name="JAVA" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -190,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DrawChessTable" />
+        <item itemvalue="Application.DrawDiagonal" />
+        <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.DrawSquare" />
         <item itemvalue="Application.DrawDiamond" />
-        <item itemvalue="Application.DrawPyramid" />
-        <item itemvalue="Application.DrawTriangle" />
-        <item itemvalue="Application.FizzBuzz" />
       </list>
     </recent_temporary>
   </component>
@@ -209,17 +207,17 @@
       <option name="presentableId" value="Default" />
       <updated>1554377721086</updated>
       <workItem from="1554377722479" duration="49380000" />
-      <workItem from="1554642199022" duration="11792000" />
+      <workItem from="1554642199022" duration="17778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61172000" />
+    <option name="totallyTimeSpent" value="67158000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="495" y="142" width="896" height="761" extended-state="0" />
+    <frame x="442" y="57" width="896" height="761" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20608899" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20608899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -228,7 +226,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3348281" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3348281" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39941263" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -519,10 +517,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GuessTheNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DrawSquare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ParametricAvarage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawChessTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawDiagonal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
