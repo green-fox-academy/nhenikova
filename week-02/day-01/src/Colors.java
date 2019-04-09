@@ -3,6 +3,7 @@ public class Colors {
 
     }
 }
+
 // - Create a two dimensional array
 //   which can contain the different shades of specified colors
 // - In `colors[0]` store the shades of green:

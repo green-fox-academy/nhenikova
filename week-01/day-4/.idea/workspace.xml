@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dba0bc5b-7e66-46d0-a291-5987c7680ffd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/ChangeElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Colors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/CompareLength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/DoubleItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Matrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/PrintAll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/PrintElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/SumElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Third.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-01/src/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-01/src/Colors.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="442" />
     <option name="y" value="57" />
     <option name="width" value="896" />
@@ -101,17 +93,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="JAVA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day-4" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -195,18 +177,17 @@
       <updated>1554377721086</updated>
       <workItem from="1554377722479" duration="49380000" />
       <workItem from="1554642199022" duration="18239000" />
-      <workItem from="1554717227513" duration="190000" />
+      <workItem from="1554717227513" duration="337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67809000" />
+    <option name="totallyTimeSpent" value="67956000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="442" y="57" width="896" height="761" extended-state="1" />
-    <editor active="true" />
+    <frame x="442" y="57" width="896" height="761" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21077283" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21077283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
