@@ -6,7 +6,7 @@ public class NumberAdder {
         System.out.println(addNumber(5));
     }
 
-    public static int addNumber (int n){
+    public static int addNumber (int n) {
         if (n <= 1) {
             return 1;
         }

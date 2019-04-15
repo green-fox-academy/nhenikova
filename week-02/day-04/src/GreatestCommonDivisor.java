@@ -2,7 +2,6 @@ public class GreatestCommonDivisor {
     public static void main(String[] args) {
 
         System.out.println(greatComDiv(60, 70, 120));
-        //15
     }
 
     public static int greatComDiv(int num1, int num2, int divisor) {

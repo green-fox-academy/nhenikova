@@ -23,7 +23,7 @@ public class CenterBoxFunction {
 
     public static void drawSquareInCenter(int size, Graphics graphics) {
 
-        Color color = new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256));
+        Color color = new Color((int)(Math.random() * 256), (int)(Math.random() * 256), (int)(Math.random() * 256));
         graphics.setColor(color);
         graphics.drawRect(WIDTH / 2 - size / 2, HEIGHT / 2 - size / 2, size, size);
     }
