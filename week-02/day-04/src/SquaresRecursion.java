@@ -22,7 +22,7 @@ public class SquaresRecursion {
         }
     }
 
-    // Don't touch the code below
+     Don't touch the code below
     static int WIDTH = 740;
     static int HEIGHT = 740;
 
@@ -37,17 +37,17 @@ public class SquaresRecursion {
         jFrame.pack();
     }
 
-    static class ImagePanel extends JPanel {
-        @Override
-        protected void paintComponent(Graphics graphics) {
-            super.paintComponent(graphics);
-            mainDraw(graphics);
-        }
-        public ImagePanel()
-        {
-            super();
-            this.setOpaque(true);
-            this.setBackground(Color.YELLOW);
-        }
+static class ImagePanel extends JPanel {
+    @Override
+    protected void paintComponent(Graphics graphics) {
+        super.paintComponent(graphics);
+        mainDraw(graphics);
     }
+    public ImagePanel()
+    {
+        super();
+        this.setOpaque(true);
+        this.setBackground(Color.YELLOW);
+    }
+}
 }
