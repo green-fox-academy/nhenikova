@@ -13,15 +13,15 @@ public class Garden {
     }
 
     public void watering(double amount) {
-        int thirstyPlant = 0;
+        int thirstyPlants = 0;
         for (Plant thirstyPlant : plants) {
             if (thirstyPlant.isThirsty()) {
-                thirstyPlant++;
+                thirstyPlants++;
             }
         }
         for (Plant plantsToWater : plants ) {
             if (plantsToWater.isThirsty()) {
-                plantsToWater.water(amount / thirstyPlant);
+                plantsToWater.water(amount / thirstyPlants);
             }
         }
     }
