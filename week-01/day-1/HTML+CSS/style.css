@@ -1,25 +1,17 @@
-html {
-    display: block;
-}
-
-head {
-    display: none;
-}
-
 body {
-    background-color: black;
+    color: black;
     background-image: url(Assets/topography/topography.png);
     background-attachment: fixed;
-    color: black;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 1pc 10pc 1pc 10pc;
     background-position: center center;
     margin: 0px;
     display: block;
+    text-align: end;
 }
 
 header {
-    background-color: rgb(51, 51, 51);
+    background-color: #333333;
+    text-align: end;
 }
 
 header::after {
@@ -50,24 +42,24 @@ div {
 
 p {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    text-align: justify;
+    font-size: 14px;
 }
 
 
 h1 {
-    font-size: 22px;
+    font-size: 40px;
     font-family: serif;
     text-align: left;
     font-weight: 400;
+    letter-spacing: 8px;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 32px;
     font-family: serif;
     text-align: left;
     font-weight: 600;
 }
+
 
