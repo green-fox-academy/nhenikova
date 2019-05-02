@@ -26,6 +26,10 @@ public class Pirate {
         return isCaptain;
     }
 
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
     public void setIsCaptain(boolean captain) {
         isCaptain = captain;
     }
