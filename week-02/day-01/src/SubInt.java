@@ -2,9 +2,6 @@ import java.util.ArrayList;
 
 public class SubInt {
     public static void main(String[] args) {
-
-
-
         //  Create a function that takes a number and an array
         //  of integers as a parameter
         //  Returns the indices of the integers in
@@ -19,13 +16,12 @@ public class SubInt {
         //  should print: '[]'
     }
 
-    public static int[] subInt (int number, int[] array ) {
+    public static ArrayList<Integer> subInt (int number, int[] array ) {
         ArrayList<Integer> indexes = new ArrayList<Integer>();
 
         for (int index = 0; index < array.length; index++) {
 
         }
         return indexes;
-
     }
 }
