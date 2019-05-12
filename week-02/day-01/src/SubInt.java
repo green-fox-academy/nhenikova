@@ -25,7 +25,7 @@ public class SubInt {
         for (int index = 0; index < array.length; index++) {
 
         }
-        return indexes
+        return indexes;
 
     }
 }
