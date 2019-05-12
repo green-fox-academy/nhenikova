@@ -9,7 +9,11 @@ public class ListIntroduction1 {
 
         namesList.add("William"); //add William to the list
 
-        System.out.println(namesList); //print the list
+        if(namesList.isEmpty()) {
+            System.out.println("The list of names is empty!");
+        } else {
+            System.out.println("The list contains this elements: " + namesList); //print the list
+        }
 
         namesList.add("John"); //add John
         namesList.add("Amanda"); //add Amanda
@@ -20,8 +24,7 @@ public class ListIntroduction1 {
 
         System.out.println(namesList.get(2)); //print the third element
 
-        for (String name: namesList //iterate through the list
-        ) {
+        for (String name: namesList) { //iterate through the list
             System.out.println(name);
         }
 
@@ -39,7 +42,12 @@ public class ListIntroduction1 {
         }
 
         namesList.clear(); //remove all elements
-        System.out.println(namesList);
+
+        if(namesList.isEmpty()) {
+            System.out.println("The list of names is empty!" + namesList);
+        } else {
+            System.out.println("The list contains this elements: " + namesList); //print the list
+        }
     }
 
 }

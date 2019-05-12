@@ -1,44 +1,43 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapIntroduction1 {
-
-    public static void main(String[] args) {
-        HashMap<Integer, String> myMap = new HashMap<>();
-        System.out.println(myMap.isEmpty());
-        myMap.put(97, "a");
-        myMap.put(98, "b");
-        myMap.put(99, "c");
-        myMap.put(65, "A");
-        myMap.put(66, "B");
-        myMap.put(67, "C");
-        for (Integer key : myMap.keySet()
-        ) {
-            System.out.println(key);
-        }
-        for (String value : myMap.values()
-        ) {
-            System.out.println(value);
-        }
-        for (Map.Entry<Integer, String>entry : myMap.entrySet()
-        ) {
-            System.out.println(entry.getKey());
-            System.out.println(entry.getValue());
-        }
-        myMap.put(68, "D");
-        System.out.println(firstMap.size());
-        System.out.println(firstMap.get(99));
-        myMap.remove(97);
-        System.out.println(firstMap.get(100));
-        if (myMap.get(100) != null) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
-        myMap.clear();
-    }
-    }
-}
+//public class MapIntroduction1 {
+//
+//    public static void main(String[] args) {
+//        HashMap<Integer, String> myMap = new HashMap<>();
+//        System.out.println(myMap.isEmpty());
+//        myMap.put(97, "a");
+//        myMap.put(98, "b");
+//        myMap.put(99, "c");
+//        myMap.put(65, "A");
+//        myMap.put(66, "B");
+//        myMap.put(67, "C");
+//        for (Integer key : myMap.keySet()
+//        ) {
+//            System.out.println(key);
+//        }
+//        for (String value : myMap.values()
+//        ) {
+//            System.out.println(value);
+//        }
+//        for (Map.Entry<Integer, String>entry : myMap.entrySet()
+//        ) {
+//            System.out.println(entry.getKey());
+//            System.out.println(entry.getValue());
+//        }
+//        myMap.put(68, "D");
+//        System.out.println(firstMap.size());
+//        System.out.println(firstMap.get(99));
+//        myMap.remove(97);
+//        System.out.println(firstMap.get(100));
+//        if (myMap.get(100) != null) {
+//            System.out.println(true);
+//        } else {
+//            System.out.println(false);
+//        }
+//        myMap.clear();
+//    }
+//}
 
 /* We are going to play with maps. Feel free to use the built-in methods where possible.
 
