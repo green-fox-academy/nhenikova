@@ -11,7 +11,7 @@ public class DrawDiagonal {
                     System.out.print("%");
                 }
             else {
-                    System.out.print("%");
+                System.out.print("%");
                     for (int j=1; j < number-1; j++){
                         if (j == i){
                             System.out.print("%");
