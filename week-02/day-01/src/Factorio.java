@@ -1,10 +1,10 @@
 public class Factorio {
     public static void main(String[] args) {
-        int factorio = factorial(7);
-        System.out.println(factorio);
+        int factParameter = factorio(7);
+        System.out.println(factParameter);
     }
 
-    public static int factorial (int input) {
+    public static int factorio (int input) {
         int factorial = 1;
         for (int i=1; i <= input; i++) {
             factorial *=i;
