@@ -120,5 +120,9 @@ public class LambdaExercises {
         //Exercise 9
         //Write a Stream Expression to find the frequency
         //of characters in a given string!
+        String s = "elephant";
+        Map<String, Long> frequentChars = Arrays.stream(characters.toLowerCase().split(""))
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+        System.out.println("Frequencies:\n" + frequentChars);
     }
 }
