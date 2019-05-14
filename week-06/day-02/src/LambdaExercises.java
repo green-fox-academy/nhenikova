@@ -76,16 +76,16 @@ public class LambdaExercises {
         //Exercise6
         //Write a Stream Expression to find the uppercase
         //characters in a string!
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please give a string: ");
-        String isUp = scanner.next()
-                .chars()
-                .filter((c) -> Character.isUpperCase(c))
-                .collect(StringBuilder::new, // supplier
-                        StringBuilder::appendCodePoint, // accumulator
-                        StringBuilder::append) // combiner
-                .toString();
-        System.out.println("The uppercase characters are " + isUp);
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Please give a string: ");
+//        String isUp = scanner.next()
+//                .chars()
+//                .filter((c) -> Character.isUpperCase(c))
+//                .collect(StringBuilder::new, // supplier
+//                        StringBuilder::appendCodePoint, // accumulator
+//                        StringBuilder::append) // combiner
+//                .toString();
+//        System.out.println("The uppercase characters are " + isUp);
 
         //method2 of exercise 6
         String test = "njHkdAnjKBHdkrml86.85J";
@@ -102,6 +102,23 @@ public class LambdaExercises {
         //Write a Stream Expression to find the strings which starts
         //with a given letter(as parameter), in the following list:
         List<String> cities = Arrays.asList("ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS");
+        List<String> citiesAdded;
+        citiesAdded = cities.stream()
+                .filter(c -> c.startsWith("A"))
+                .collect(Collectors.toList());
+        System.out.println(citiesAdded);
 
+        //Exercise8
+        //Write a Stream Expression to concatenate a Character list to a string!
+        String text = "";
+
+        String finishedtext = Arrays.asList('b', 'l', 'a', 'c', 'k').stream()
+                .map(c -> c.toString())
+                .collect(Collectors.joining("", text, ""));
+        System.out.println(finishedtext);
+
+        //Exercise 9
+        //Write a Stream Expression to find the frequency
+        //of characters in a given string!
     }
 }
