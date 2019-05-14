@@ -1,7 +1,6 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class LambdaExercises {
     public static void main(String[] args) {
@@ -47,13 +46,21 @@ public class LambdaExercises {
         //Exercise4
         //Write a Stream Expression to get the average value of the odd
         //numbers from the following list:
-        double averageOddNumbers;
+        OptionalDouble averageOddNumbers;
         averageOddNumbers = numbers.stream()
                 .filter(n -> !(n%2 ==0))
                 .mapToInt(Integer::intValue)
-                .average()
-                .getAsDouble();
-        System.out.println(averageOddNumbers);
+                .average();
+        if (averageOddNumbers.isPresent()) {
+        System.out.println(averageOddNumbers.getAsDouble());
+        } //handle the case, if there is nothing inside
+
+        //method2 of exercise 4
+        double oddNumbersAverage;
+        oddNumbersAverage = numbers.stream()
+                .filter(n -> !(n%2 ==0))
+                .collect(Collectors.averagingDouble(Integer::intValue));
+        System.out.println(oddNumbersAverage);
 
         //Exercise5
         //Write a Stream Expression to get the sum of
@@ -69,5 +76,32 @@ public class LambdaExercises {
         //Exercise6
         //Write a Stream Expression to find the uppercase
         //characters in a string!
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please give a string: ");
+        String isUp = scanner.next()
+                .chars()
+                .filter((c) -> Character.isUpperCase(c))
+                .collect(StringBuilder::new, // supplier
+                        StringBuilder::appendCodePoint, // accumulator
+                        StringBuilder::append) // combiner
+                .toString();
+        System.out.println("The uppercase characters are " + isUp);
+
+        //method2 of exercise 6
+        String test = "njHkdAnjKBHdkrml86.85J";
+
+        List<Character> uppersCaseCharacters = test.chars()
+                .filter(c -> Character.isUpperCase(c))
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.toList());
+
+        String joinedChar = uppersCaseCharacters.toString();
+        System.out.println(joinedChar);
+
+        //Exercise7
+        //Write a Stream Expression to find the strings which starts
+        //with a given letter(as parameter), in the following list:
+        List<String> cities = Arrays.asList("ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS");
+
     }
 }
