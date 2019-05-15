@@ -1,4 +1,4 @@
 package com.greenfoxacademy.springstart.controllers;
 
-public class GreetingController {
+public class HellorRESTController {
 }
