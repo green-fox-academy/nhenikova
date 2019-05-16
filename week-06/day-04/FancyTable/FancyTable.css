@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    color: #666B84;
+    background: #4396E9;
+}
+
+table {
+    background: #EBEBEB;
+    margin: auto;
+    margin-top: 200px;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+tr:nth-child(even) {
+    background: #FFFFFF;
+}
+
+td, th {
+    padding: 1rem;
+    text-align: left;
+    width: 50%;
+    border: 2px #666B84 solid;
+}
+
+th {
+    font-weight: 300;
+    border-bottom: 4px 9EA7AF;
+    font-size: 30px;
+    background: black;
+    color: #CDD5DD;
+}
+
+.dollars::before {
+    content:'$ ';
+}
