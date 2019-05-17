@@ -24,5 +24,9 @@ public class ShopController {
         return "myStore";
     }
 
-    @RequestMapping ("/")
+    @RequestMapping ("/onlyAvailable")
+    public String onlyAvailable(Model model) {
+        model.addAttribute("item", myStore.sortAvailable());
+        return "myStore";
+    }
 }
