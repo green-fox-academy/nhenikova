@@ -24,9 +24,32 @@ public class ShopController {
         return "myStore";
     }
 
-    @RequestMapping ("/onlyAvailable")
+    @RequestMapping ("/only-available")
     public String onlyAvailable(Model model) {
-        model.addAttribute("item", myStore.sortAvailable());
+        model.addAttribute("availableitem", myStore.sortAvailable());
         return "myStore";
     }
+
+    @RequestMapping ("/cheapest-first")
+    public String cheapestFirst(Model model) {
+        model.addAttribute("cheapestitem", myStore.sortCheapFirst());
+        return "myStore";
+    }
+
+    @RequestMapping ("/contains-nike")
+    public String containsNike(Model model) {
+        model.addAttribute("itemnike", myStore.containsKeyword("Nike"));
+        return "myStore";
+    }
+
+    @RequestMapping ("/average-stock")
+    public String averageStock(Model model) {
+        double stock = myStore.getAverageStock();
+        String result = "Average stock: " + stock;
+        model.addAttribute("averagestock", myStore.equals(result));
+        return "myStore";
+    }
+
+    @RequestMapping
+    public String 
 }
