@@ -44,7 +44,7 @@ public class ShopItem implements Comparable<ShopItem> {
         quantityOfStock += quantity;
     }
 
-    public int comparePrice(ShopItem otherItem) {
+    public int compareTo(ShopItem otherItem) {
         if(this.price < otherItem.price) {
             return -1;
         } else if (this.price > otherItem.price) {

@@ -27,7 +27,7 @@ public class ShopItemStore {
 
     public List<ShopItem> sortCheapFirst() {
         return itemList.stream()
-                .sorted(ShopItem::comparePrice)
+                .sorted(ShopItem::compareTo)
                 .collect(Collectors.toList());
     }
 
@@ -48,7 +48,7 @@ public class ShopItemStore {
 
     public String getMostExpensive() {
         return itemList.stream()
-                .max(ShopItem::comparePrice)
+                .max(ShopItem::compareTo)
                 .get().getName();
     }
 

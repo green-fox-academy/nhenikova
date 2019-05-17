@@ -4,7 +4,10 @@ import com.greenfoxacademy.webshop.models.ShopItem;
 import com.greenfoxacademy.webshop.models.ShopItemStore;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 public class ShopController {
@@ -26,19 +29,19 @@ public class ShopController {
 
     @RequestMapping ("/only-available")
     public String onlyAvailable(Model model) {
-        model.addAttribute("availableitem", myStore.sortAvailable());
+        model.addAttribute("item", myStore.sortAvailable());
         return "myStore";
     }
 
     @RequestMapping ("/cheapest-first")
     public String cheapestFirst(Model model) {
-        model.addAttribute("cheapestitem", myStore.sortCheapFirst());
+        model.addAttribute("item", myStore.sortCheapFirst());
         return "myStore";
     }
 
     @RequestMapping ("/contains-nike")
     public String containsNike(Model model) {
-        model.addAttribute("itemnike", myStore.containsKeyword("Nike"));
+        model.addAttribute("item", myStore.containsKeyword("Nike"));
         return "myStore";
     }
 
@@ -46,10 +49,30 @@ public class ShopController {
     public String averageStock(Model model) {
         double stock = myStore.getAverageStock();
         String result = "Average stock: " + stock;
-        model.addAttribute("averagestock", myStore.equals(result));
+        model.addAttribute("item", myStore.equals(result));
+        return "mySingleStore";
+    }
+
+    @RequestMapping ("/most-expensive")
+    public String mostExpensive(Model model) {
+        String name = myStore.getMostExpensive();
+        String result = "THe most expensive item is" + name;
+        model.addAttribute("item", myStore.equals(result));
+        return "mySingleStore";
+    }
+
+    @PostMapping(value="/search")
+    public String search(Model model, String input) {
+        model.addAttribute("item", myStore.containsKeyword(input));
         return "myStore";
     }
 
-    @RequestMapping
-    public String 
+    private void addItemListToModel(Model model, List<ShopItem> list) {
+        try {
+            model.addAttribute("item", list);
+        } catch (NullPointerException eX) {
+            System.err.println(eX.getMessage());
+            System.out.println(list);
+        }
+    }
 }
