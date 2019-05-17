@@ -39,10 +39,27 @@ public class ShopItemStore {
     }
 
     public double getAverageStock() {
-        
+        double totalAverage = 0;
+        for (ShopItem item:itemList) {
+            totalAverage = totalAverage + item.getQuantityOfStock();
+        }
+        return totalAverage/this.itemList.size();
     }
 
+    public String getMostExpensive() {
+        return itemList.stream()
+                .max(ShopItem::comparePrice)
+                .get().getName();
+    }
 
-
-
+//    @Override
+//    public String toString() {
+//        String result = "";
+//        for (ShopItem item : itemList) {
+//            result += "ITEM: ";
+//            result += item;
+//            result += System.lineSeparator();
+//        }
+//        return result;
+//    }
 }
