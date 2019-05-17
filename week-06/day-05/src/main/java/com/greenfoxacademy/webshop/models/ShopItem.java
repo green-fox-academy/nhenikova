@@ -1,6 +1,6 @@
-package com.greenfoxacademy.basicweb.models;
+package com.greenfoxacademy.webshop.models;
 
-public class ShopItem {
+public class ShopItem implements Comparable<ShopItem> {
     private String name;
     private String description;
     private double price;
@@ -44,10 +44,19 @@ public class ShopItem {
         quantityOfStock += quantity;
     }
 
-    //@Override
-    //    public int compareTo(ShopItem o) {
-    //        return (int) (this.price - o.getPrice());
-    //    }
+    public int comparePrice(ShopItem otherItem) {
+        if(this.price < otherItem.price) {
+            return -1;
+        } else if (this.price > otherItem.price) {
+            return 1;
+        }
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "" + this.name + " " + this.description + " " + this.price + " " + this.quantityOfStock;
+    }
 }
 
 
