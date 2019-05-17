@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #EBEBEB;
+    color: #515151
+}
+
+h1 {
+    font-size: 32pt;
+}
+
+form {
+    background: #FFFFFF;
+    font-variant-caps: all-small-caps;
+    margin: 50px auto;
+    padding: 1.5em 5%;
+    width: 320px;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+.link {
+    text-align: right;
+    font-size: 15px;
+}
+
+a {
+    color: #515151;
+    font-variant-caps: normal;
+    text-decoration: none;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #E7E7E7;
+}
+
+input[type="password"]{
+    background: url(eye.png) 95% no-repeat;
+    background-size: 70px;
+}
+
+input:focus {
+    border-color: #77A171;
+    outline: 0;
+}
+
+button {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    border-radius: 40px;
+    width: 125px;
+    border: 0px;
+}
+
+button:focus {
+    outline: 0;
+}
