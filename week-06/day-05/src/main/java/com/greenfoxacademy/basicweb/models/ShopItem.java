@@ -1,4 +1,4 @@
-package com.greenfoxacademy.webshop.models;
+package com.greenfoxacademy.basicweb.models;
 
 public class ShopItem implements Comparable<ShopItem> {
     private String name;

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>My beatiful web</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity of stock</th>
+    </tr>
+    <tr th:each="item : ${items}">
+        <td th:text="${item.getName()}"></td>
+        <td th:text="${item.getDescription()}"></td>
+        <td th:text="${item.getPrice()}"></td>
+        <td th:text="${item.getQuantityOfStock()}"></td>
+    </tr>
+</table>
+<form action="/web/webshop/availableonly" method="get"> <button type="submit">ONLY AVAILABLE</button></form>
+<form action="/web/webshop/cheapestfirst" method="get"> <button type="submit">CHEAPEST FIRST</button></form>
+<form action="/web/webshop/startswithnike" method="get"> <button type="submit">CONTAINS NIKE</button></form>
+<form action="/web/webshop/averagestock" method="get"> <button type="submit">AVERAGE STOCK</button></form>
+<form action="/web/webshop/mostexpensiveavailable" method="get"> <button type="submit">MOST EXPENSIVE </button></form>
+<p th:text="'Hello, ' + ${name} + '! This site was loaded ' + ${counter} + ' times since last server start.'"/>
+</body>
+</html>
