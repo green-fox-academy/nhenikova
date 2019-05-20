@@ -17,14 +17,14 @@ public class BankController {
 
     @GetMapping ("/show")
     public String show(Model model) {
-        BankAccount simba = new BankAccount("Simba", 2000.00, "lion");
+        BankAccount simba = new BankAccount("Simba", 2000.00, "lion", true, false);
         model.addAttribute("account", simba);
         return "show";
     }
 
     @GetMapping ("/show-table")
     public String showTable(Model model) {
-        model.addAttribute("accounts", accounts);
+        model.addAttribute("accounts", accounts.getAccounts());
         return "showtable";
     }
 }

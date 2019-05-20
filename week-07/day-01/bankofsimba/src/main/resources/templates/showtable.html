@@ -10,17 +10,19 @@
                 <th>Index</th>
                 <th>Name</th>
                 <th>Balance</th>
+                <th>Animal Species</th>
+                <th>King</th>
+                <th>Villain</th>
             </tr>
             </thead>
-            <tr th:each="account : ${accounts} th:object=">
-                <td th:text="*{name}"></td>
-                <td th:text="*{#numbers.formatDecimal(balance, 0, 'COMMA', 2, 'POINT')} + ' EUR'"></td>
-                <td th:text="*{animalType}"></td>
+            <tr th:each="account : ${accounts}">
+                <td th
+                <td th:text="${account.name}"></td>
+                <td th:text="*{#numbers.formatDecimal(account.balance, 0, 'COMMA', 2, 'POINT')} + ' EUR'"></td>
+                <td th:text="*{account.animalType}"></td>
             </tr>
         </table>
         <div>
-
-
 
 </head>
 <body>
