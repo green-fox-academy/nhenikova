@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Show Account</title>
 </head>
 <body>
-
+<div th:object="${account}">
+    <p th:text="'The name of the account is: ' + *{name}">
+    <p th:text="'Balance of the account is: ' + ${#numbers.formatDecimal(account.getBalance(),0,'COMMA',2,'POINT')} + 'EUR'"></p>
+    <p th:text="'Animal species is: ' + *{animalType}">
+</div>
 </body>
 </html>
