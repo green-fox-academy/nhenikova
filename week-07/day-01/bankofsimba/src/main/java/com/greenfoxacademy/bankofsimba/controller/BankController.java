@@ -27,4 +27,18 @@ public class BankController {
         model.addAttribute("accounts", accounts.getAccounts());
         return "showtable";
     }
+
+    @GetMapping("/HTMLception")
+    public String htmlception (Model model) {
+        model.addAttribute("text", "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>");
+        return "htmlception";
+    }
+
+    @GetMapping("/raise-balance")
+    public String displayBalanceForm(Model model) {
+        model.addAttribute("accounts", accounts.getAccounts());
+        return "balanceform";
+    }
+
+
 }

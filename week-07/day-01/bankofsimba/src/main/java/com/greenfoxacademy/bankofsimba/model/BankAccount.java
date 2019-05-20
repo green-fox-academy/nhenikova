@@ -4,15 +4,15 @@ public class BankAccount {
     private String name;
     private double balance;
     private String animalType;
-    private boolean isKing;
-    private boolean isVillain;
+    private boolean king;
+    private boolean villain;
 
-    public BankAccount(String name, double balance, String animalType, boolean isKing, boolean isVillain) {
+    public BankAccount(String name, double balance, String animalType, boolean king, boolean villain) {
         this.name = name;
         this.balance = balance;
         this.animalType = animalType;
-        this.isKing = isKing;
-        this.isVillain = isVillain;
+        this.king = king;
+        this.villain = villain;
     }
 
     public BankAccount() {
@@ -43,18 +43,26 @@ public class BankAccount {
     }
 
     public boolean isKing() {
-        return isKing;
+        return king;
     }
 
     public void setKing(boolean king) {
-        isKing = king;
+        this.king = king;
     }
 
     public boolean isVillain() {
-        return isVillain;
+        return villain;
     }
 
     public void setVillain(boolean villain) {
-        isVillain = villain;
+        this.villain = villain;
+    }
+
+    public void incrementBalance() {
+        if (king) {
+            balance += 100;
+        } else {
+            balance += 10;
+        }
     }
 }

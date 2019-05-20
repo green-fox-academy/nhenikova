@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Show Table of Accounts</title>
     <div>
         <table>
@@ -11,18 +15,18 @@
                 <th>Name</th>
                 <th>Balance</th>
                 <th>Animal Species</th>
-                <th>King</th>
                 <th>Villain</th>
             </tr>
             </thead>
-            <tr th:each="account : ${accounts}">
-                <td th
-                <td th:text="${account.name}"></td>
-                <td th:text="*{#numbers.formatDecimal(account.balance, 0, 'COMMA', 2, 'POINT')} + ' EUR'"></td>
-                <td th:text="*{account.animalType}"></td>
+            <tr th:each="account : ${accounts}" th:style="*{account.isKing()} ? 'color:silver' : 'color:black'">
+                <td th:text="${accountStat.index}"></td>
+                <td th:text="${account.getName()}"></td>
+                <td th:text="${#numbers.formatDecimal(account.getBalance(), 0, 'COMMA', 2, 'POINT')} + ' EUR'"></td>
+                <td th:text="${account.getAnimalType()}"></td>
+                <td th:text="*{account.isVillain()} ? 'Bad Guy' : 'Good Guy'"></td>
             </tr>
         </table>
-        <div>
+    </div>
 
 </head>
 <body>
