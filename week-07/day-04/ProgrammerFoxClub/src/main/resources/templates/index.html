@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css"
+      href="/css/ReviewPageStyleSheet.css" />
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home Page</title>
 </head>
 <body>
-
+<a href="/">Information</a>
+<p th:text = "${home}"></p>
+<img src="../static/img/greenfox.png" width="200" th:src="@{img/greenfox.png}"/>
+<div>
+    <p>This is Mr.Fox currently living on pizza and lemonade. He knowa 2 tricks.</p>
+    <p><b>Known Tricks</b></p>
+    <p>write HTML</p>
+    <p>code in Java</p>
+</div>
 </body>
 </html>
