@@ -1,6 +1,6 @@
 package com.greenfox.library.controllers;
 
-import com.greenfox.library.Book;
+import com.greenfox.library.models.Book;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,32 +11,33 @@ import java.util.stream.Collectors;
 
 @Controller
 public class BookController {
-    private List<Book> books;
+    private List<Book> library;
 
     public BookController() {
-        books = new ArrayList();
-        books.add(new Book("Cat's Cradle", "Kurt Vonnegut", 1963));
-        books.add(new Book("Do Androids Dream of Electric Sheep?", "Philip K. Dick", 1968));
+        library = new ArrayList();
+        library.add(new Book( "Cat's Cradle", "Kurt Vonnegut", 1963));
+        library.add(new Book( "Do Androids Dream of Electric Sheep?", "Philip K. Dick", 1968));
+        library.add(new Book( "Wuthering heights", "Emily Bronte", 1847));
     }
 
-    @GetMapping(path = "/books")
+    @GetMapping("/books")
     public String showBooks(Model model, @RequestParam(name = "author", required = false) String author) {
         List<Book> booksToList = null;
         if (author != null) {
-            booksToList = books.stream()
+            booksToList = library.stream()
                     .filter(book -> book.getAuthor().equals(author))
                     .collect(Collectors.toList());
         } else {
-            booksToList = books;
+            booksToList = library;
         }
         model.addAttribute("books", booksToList);
         return "booklist";
     }
 
-    @GetMapping(path = "/books/{id}/details")
+    @GetMapping("/books/{id}/details")
     public String getBookById(Model model, @PathVariable(name = "id") int id) {
         Book selected = null;
-        for (Book book : books) {
+        for (Book book : library) {
             if (book.getId() == id) {
                 selected = book;
             }
@@ -57,9 +58,8 @@ public class BookController {
 
     @PostMapping("/books/add")
     public String addBook(@ModelAttribute(name = "book") Book book) {
-        books.add(book);
+        library.add(book);
         return "redirect:/books";
     }
-
 
 }

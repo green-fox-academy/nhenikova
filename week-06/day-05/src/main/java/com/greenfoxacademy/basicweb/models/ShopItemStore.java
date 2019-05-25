@@ -41,8 +41,8 @@ public class ShopItemStore {
 
     public List<ShopItem> searchItems(String searchInput) {
         return itemList.stream()
-                .filter(ShopItem -> ShopItem.getName().toLowerCase().contains(searchInput.toLowerCase())
-                        || ShopItem.getDescription().toLowerCase().contains(searchInput.toLowerCase()))
+                .filter(item -> item.getName().toLowerCase().contains(searchInput.toLowerCase())
+                        || item.getDescription().toLowerCase().contains(searchInput.toLowerCase()))
                 .collect(Collectors.toList());
     }
 

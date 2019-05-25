@@ -1,8 +1,8 @@
-package com.greenfox.library;
+package com.greenfox.library.models;
 
 
 public class Book {
-    private static int nextId = 0;
+    private static int nextId = 1;
     private int id;
     private String title;
     private String author;
@@ -31,15 +31,4 @@ public class Book {
         return releaseYear;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public void setReleaseYear(Integer releaseYear) {
-        this.releaseYear = releaseYear;
-    }
 }

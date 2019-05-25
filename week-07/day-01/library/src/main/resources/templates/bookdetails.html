@@ -9,7 +9,7 @@
 <div>
     <span th:if="${error}" th:text="${error}"></span>
     <div th:unless="${error}" th:object="${book}">
-        <h1 th:text="*{title} + ', ' + *{author}"></h1>
+        <h1 th:text="*{title} + ', ' + *{author} + ', ' + *{releaseYear}"></h1>
     </div>
 </div>
 

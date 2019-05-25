@@ -57,9 +57,9 @@ public class ShopController {
         return "mystore";
     }
 
-    @PostMapping("/web/search")
-    public String search(Model model, @RequestParam String searchInput) {
-        model.addAttribute("items", myStore.searchItems(searchInput));
+    @GetMapping("/web/search")
+    public String search(Model model, @RequestParam (required = false) String search) {
+        model.addAttribute("items", myStore.searchItems(search));
         return "mystore";
     }
 }
