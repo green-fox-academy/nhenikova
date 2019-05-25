@@ -1,6 +1,7 @@
 package com.greenfoxacademy.basicweb.models;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,9 +27,10 @@ public class ShopItemStore {
     }
 
     public List<ShopItem> sortCheapFirst() {
-        return itemList.stream()
-                .sorted(ShopItem::compareTo)
+        List<ShopItem> cheapItem = itemList.stream()
+                .sorted(Comparator.comparingDouble(ShopItem::getPrice))
                 .collect(Collectors.toList());
+        return cheapItem;
     }
 
     public List<ShopItem> containsNike() {
@@ -51,9 +53,14 @@ public class ShopItemStore {
                 .getAsDouble();
     }
 
-    public String getMostExpensive() {
-        return itemList.stream()
-                .max(ShopItem::compareTo)
-                .get().getName();
+    public List<ShopItem> getMostExpensive() {
+        Comparator<ShopItem> comparator = Comparator.comparing(ShopItem::getPrice);
+        List<ShopItem> expensiveItem = new ArrayList<>();
+
+        ShopItem expensive =  itemList.stream()
+                .max(comparator)
+                .get();
+        expensiveItem.add(expensive);
+        return expensiveItem;
     }
 }
