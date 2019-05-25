@@ -41,7 +41,7 @@ public class ShopItem implements Comparable<ShopItem> {
     }
 
     public void addToStock(int quantity) {
-        quantityOfStock += quantity;
+        this.quantityOfStock += quantity;
     }
 
     public int compareTo(ShopItem otherItem) {
