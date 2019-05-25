@@ -31,19 +31,24 @@ public class ShopItemStore {
                 .collect(Collectors.toList());
     }
 
-    public List<ShopItem> containsKeyword(String string) {
+    public List<ShopItem> containsNike() {
         return itemList.stream()
-                .filter(ShopItem -> ShopItem.getName().toLowerCase().contains(string.toLowerCase())
-                || ShopItem.getDescription().toLowerCase().contains(string.toLowerCase()))
+                .filter(item -> item.getDescription().toLowerCase().contains("nike"))
+                .collect(Collectors.toList());
+    }
+
+    public List<ShopItem> searchItems(String searchInput) {
+        return itemList.stream()
+                .filter(ShopItem -> ShopItem.getName().toLowerCase().contains(searchInput.toLowerCase())
+                        || ShopItem.getDescription().toLowerCase().contains(searchInput.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
     public double getAverageStock() {
-        double totalAverage = 0;
-        for (ShopItem item:itemList) {
-            totalAverage = totalAverage + item.getQuantityOfStock();
-        }
-        return totalAverage/this.itemList.size();
+        return itemList.stream()
+                .mapToDouble(item -> item.getQuantityOfStock())
+                .average()
+                .getAsDouble();
     }
 
     public String getMostExpensive() {
@@ -51,15 +56,4 @@ public class ShopItemStore {
                 .max(ShopItem::compareTo)
                 .get().getName();
     }
-
-//    @Override
-//    public String toString() {
-//        String result = "";
-//        for (ShopItem item : itemList) {
-//            result += "ITEM: ";
-//            result += item;
-//            result += System.lineSeparator();
-//        }
-//        return result;
-//    }
 }

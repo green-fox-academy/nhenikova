@@ -19,27 +19,7 @@
     <li><a href="http://localhost:8080/web/average-stock">Average stock</a></li>
 </ul>
 
-<form method="post" action="/web/search">
-    <input type="text" name="search" placeholder="search something">
-    <button type="submit">Search</button>
-</form>
+<h3 th:text="'Aavarage stock is: ' + ${avg}"></h3>
 
-<table>
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th>Quantity of stock</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="item : ${items}">
-        <td th:text="${item.getName()}"></td>
-        <td th:text="${item.getDescription()}"></td>
-        <td th:text="${item.getPrice()}"></td>
-        <td th:text="${item.getQuantityOfStock()}"></td>
-    </tr>
-    </tbody>
 </body>
 </html>
