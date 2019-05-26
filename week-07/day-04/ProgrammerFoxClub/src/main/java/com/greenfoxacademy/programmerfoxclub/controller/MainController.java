@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-    @GetMapping(path = "/")
+    @GetMapping("/")
     public String displayFox (String str, Model model) {
         model.addAttribute("home", "Iam Mr. Fox." );
         return "index";
     }
 
-    @GetMapping(path = "/login")
-    public String login() {
+    @GetMapping("/login")
+    public String loginGet() {
         return  "login";
     }
 
-    @PostMapping(path = "/login")
-    public String login(@RequestParam String name, Model model)
+    @PostMapping("/login")
+    public String login(@RequestParam String name)
 
 }
