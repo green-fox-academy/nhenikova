@@ -5,16 +5,15 @@ body {
 }
 
 h1 {
-    font-size: 32pt;
+    font-size: 36px;
 }
 
 form {
-    background: #FFFFFF;
-    font-variant-caps: all-small-caps;
+    background: #ffffff;
     margin: 50px auto;
-    padding: 1.5em 5%;
+    padding: 2.5% 5%;
     width: 320px;
-    font-size: 14pt;
+    font-size: 24px;
     border-radius: 5px;
 }
 
@@ -33,7 +32,7 @@ input {
     padding: 12px;
     width: 100%;
     border-radius: 6px;
-    border: 1px solid #E7E7E7;
+    border: 1px solid rgba(255, 101, 246, 0.75);
 }
 
 input[type="password"]{
@@ -42,8 +41,7 @@ input[type="password"]{
 }
 
 input:focus {
-    border-color: #77A171;
-    outline: 0;
+    border-color: #9c2ea1;
 }
 
 button {
