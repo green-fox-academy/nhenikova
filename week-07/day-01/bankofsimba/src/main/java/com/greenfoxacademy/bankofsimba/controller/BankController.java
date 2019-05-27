@@ -5,15 +5,15 @@ import com.greenfoxacademy.bankofsimba.model.BankAccountStore;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class BankController {
 
    private BankAccountStore accounts = new BankAccountStore();
+
 
     @GetMapping ("/show")
     public String show(Model model) {
@@ -40,5 +40,16 @@ public class BankController {
         return "balanceform";
     }
 
+    @GetMapping("/create-account")
+    public String displayAccountForm(Model model, @ModelAttribute(name = "account") BankAccount account ){
+        model.addAttribute("account", account);
+        return "accountform";
+    }
+
+    @PostMapping("/create-account")
+    public String createAccount(@ModelAttribute(name = "account") BankAccount account) {
+        accounts.getAccounts().add(account);
+        return "redirect:/showtable";
+    }
 
 }

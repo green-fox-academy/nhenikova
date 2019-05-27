@@ -20,4 +20,5 @@ public class BankAccountStore {
     public List<BankAccount> getAccounts() {
         return animalAccounts;
     }
+
 }
