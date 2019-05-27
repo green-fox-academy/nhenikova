@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sign Up</title>
+    <title>Sign Up Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="signupform.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-<form action="https://newsletter-ws.herokuapp.com/register" id="signupform" method="post"/>
-<h1>Sign Up</h1>
-<input type="text" name="username" required placeholder="Username"/>
-<input type="email" name="email" required placeholder="E-mail"/>
-<input type="password" name="password" required placeholder="Password"/>
-<input type="password" name="retype password" required placeholder="Retype password"/>
-<button type="submit" form="signupform" value="Submit">SIGN ME UP</button>
-</form>
+
+<div class="main">
+    <h1>Sign Up</h1>
+    <div class="page">
+        <div id="formParts">
+            <form action="https://newsletter-ws.herokuapp.com/register" id="signupForm" method="post">
+                <div class="fields"><input type="text" name="name" required placeholder="Username"></div>
+                <div class="fields"><input type="email" name="email" required placeholder="E-mail"></div>
+                <div class="fields"><input type="password" name="password" required placeholder="Password"></div>
+                <div class="fields"><input type="password" name="passwordConfirmation" required placeholder="Retype password"></div>
+            </form>
+        </div>
+        <div id="or">
+            OR
+        </div>
+        <div id="linkParts">
+            <ul class="linkColumn">
+                <li class="links" id="facebook"><a href="#">Log in with facebook</a></li>
+                <li class="links" id="twitter"><a href="#">Log in with Twitter</a></li>
+                <li class="links" id="googleplus"><a href="#">Log in with Google+</a></li>
+            </ul>
+        </div>
+    </div>
+    <button type="submit" form="signupForm" value="submit">Sign me up</button>
+</div>
 </body>
 </html>
