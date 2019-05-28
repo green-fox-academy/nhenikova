@@ -1,4 +1,4 @@
-package com.greenfoxacademy.todoapp.Model;
+package com.greenfoxacademy.todoapp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,10 +14,10 @@ public class ToDo {
     private boolean isUrgent;
     private boolean isDone;
 
-    public ToDo(String title, boolean isUrgent) {
+    public ToDo(String title, boolean isUrgent, boolean isDone) {
         this.title = title;
         this.isUrgent = isUrgent;
-        this.isDone = false;
+        this.isDone = isDone;
     }
 
     public ToDo() {
@@ -37,5 +37,15 @@ public class ToDo {
 
     public boolean isDone() {
         return isDone;
+    }
+
+    @Override
+    public String toString() {
+        return "ToDo{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", isUrgent=" + isUrgent +
+                ", isDone=" + isDone +
+                '}';
     }
 }
