@@ -9,8 +9,14 @@
     <h1>ToDos for today:</h1>
 </header>
 <main>
+    <th>ID</th>
+    <th>ACTION</th>
+    <th>DONE</th>
+    <th>URGENT</th>
     <ul th:each="todo : ${todos}">
         <li th:text="${todo.title}"></li>
+        <li th:text="${todo.isUrgent()}"></li>
+        <li th:text="${todo.isDone()}"></li>
     </ul>
 </main>
 </body>

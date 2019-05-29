@@ -11,13 +11,13 @@ public class ToDo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String title;
-    private boolean isUrgent;
-    private boolean isDone;
+    private boolean urgent;
+    private boolean done;
 
-    public ToDo(String title, boolean isUrgent, boolean isDone) {
+    public ToDo(String title, boolean urgent, boolean done) {
         this.title = title;
-        this.isUrgent = isUrgent;
-        this.isDone = isDone;
+        this.urgent = urgent;
+        this.done = done;
     }
 
     public ToDo() {
@@ -32,20 +32,18 @@ public class ToDo {
     }
 
     public boolean isUrgent() {
-        return isUrgent;
+        return urgent;
+    }
+
+    public void setUrgent(boolean urgent) {
+        this.urgent = urgent;
     }
 
     public boolean isDone() {
-        return isDone;
+        return done;
     }
 
-    @Override
-    public String toString() {
-        return "ToDo{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", isUrgent=" + isUrgent +
-                ", isDone=" + isDone +
-                '}';
+    public void setDone(boolean done) {
+        this.done = done;
     }
 }
