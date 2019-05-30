@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/static/styles.css"/>
+    <title>Edit todo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Edit Todo</h1>
+<div class="container">
+    <form action="#" th:action="@{/todo/add}" th:object="${todo}" th:method="post">
+        <label for="title">Todo Description</label>
+        <input type="text" name="title" id="title" th:field="*{title}" required>
+
+        <label for="author">Urgent</label>
+        <input type="text" name="author" id="author" th:field="*{author}" required>
+
+        <label for="year">Done</label>
+        <input type="number" name="year" id="year" th:field="*{releaseYear}" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

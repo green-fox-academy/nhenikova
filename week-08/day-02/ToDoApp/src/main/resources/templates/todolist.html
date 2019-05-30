@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/static/styles.css"/>
     <title>ToDo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<header>
-    <h1>ToDos for today:</h1>
-</header>
-<main>
-    <th>ID</th>
-    <th>ACTION</th>
-    <th>DONE</th>
-    <th>URGENT</th>
-    <ul th:each="todo : ${todos}">
-        <li th:text="${todo.title}"></li>
-        <li th:text="${todo.isUrgent()}"></li>
-        <li th:text="${todo.isDone()}"></li>
-    </ul>
-</main>
+
+<h1>Todos for Today:</h1>
+<br>
+<div class="container">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">ACTION TODO</th>
+            <th scope="col">DONE</th>
+            <th scope="col">URGENT</th>
+            <th scope="col">DELETE</th>
+            <th scope="col">EDIT</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="todo : ${todos}">
+                <td scope="row" th:text="${todo.getId()}"></td>
+                <td scope="row" th:text="${todo.getTitle()}"></td>
+                <td scope="row" th:text="${todo.isUrgent()}"></td>
+                <td scope="row" th:text="${todo.isDone()}"></td>
+                <td scope="row"><a class="btn btn-danger" th:href="${todo.getId()} + '/delete'">Delete</a></td>
+                <td scope="row"><a class="btn btn-info" th:href="${todo.getId()} + '/edit'">Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <br>
+    <div class="container">
+        <a class="btn btn-warning" href="/todo/create" method="GET">Add new todo</a>
+    </div>
+    <br>
 </body>
 </html>
+
+
+
