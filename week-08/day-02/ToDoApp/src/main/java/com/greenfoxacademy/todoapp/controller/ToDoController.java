@@ -3,7 +3,6 @@ package com.greenfoxacademy.todoapp.controller;
 
 import com.greenfoxacademy.todoapp.model.ToDo;
 import com.greenfoxacademy.todoapp.repository.ToDoRepository;
-import com.sun.tools.javac.comp.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,14 +31,14 @@ public class ToDoController {
     }
 
 
-    @GetMapping("/add")
+    @GetMapping("/create")
     public String showForm(Model model) {
         model.addAttribute("todo", new ToDo());
-        return "addform";
+        return "createform";
     }
 
-    @PostMapping("/add")
-    public String addTodo(@RequestParam String title, @RequestParam(value = "isUrgent", defaultValue = "false") boolean urgent, @RequestParam(value = "isDone", defaultValue = "false") boolean done) {
+    @PostMapping("/create")
+    public String createTodo(@RequestParam String title, @RequestParam(value = "isUrgent", defaultValue = "false") boolean urgent, @RequestParam(value = "isDone", defaultValue = "false") boolean done) {
         this.repo.save(new ToDo(title, urgent, done));
         return "redirect:/todo";
     }
@@ -47,20 +46,25 @@ public class ToDoController {
     @GetMapping("/{id}/delete")
     public String deleteTodo(@PathVariable("id") long id) {
         this.repo.deleteById(id);
-        return "redirect:/todo";
+        return "redirect:/todo/list";
     }
 
     @GetMapping("/{id}/edit")
     public String editTodo(@PathVariable("id") long id, Model model) {
-        model.addAttribute("todo", repo.findById(id).get())
-        return "redirect:/todo";
+        model.addAttribute("todo", repo.findById(id).get());
+        return "edittodo";
     }
 
     @PostMapping("/{id}/edit")
-    public String eTodo(@PathVariable("id") long id) {
-        this.repo.save()
-        return "redirect:/todo";
+    public String save(@ModelAttribute ToDo todo) {
+        repo.save(todo);
+        return "redirect:/todo/";
     }
+
+//    @PostMapping("/{id}/edit")
+//    public String eTodo(@PathVariable("id") long id) {
+//        return "redirect:/todo";
+//    }
 
 //    @GetMapping("/seed")
 //    public String seed() {
