@@ -1,6 +1,8 @@
 package com.greenfoxacademy.bookstore.controllers;
 
 import com.greenfoxacademy.bookstore.models.Book;
+import com.greenfoxacademy.bookstore.services.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,39 +17,40 @@ import java.util.stream.Collectors;
 @Controller
 public class BookController {
 
-    private List<Book> booklist = new ArrayList<>();
+    BookService service;
 
-    public BookController() {
-        booklist.add(new Book("Title1", "Author1", 1963));
-        booklist.add(new Book("Title2", "Author2", 1968));
+    @Autowired
+    public BookController(BookService service) {
+        this.service = service;
     }
 
     @RequestMapping(path = "/books", method = RequestMethod.GET)
     public String showBooks(Model model) {
-        model.addAttribute("firstBook", booklist.get(0));
-        model.addAttribute("books", booklist);
+
+        List<Book> allBooks = service.getBooklist();
+        model.addAttribute("firstBook", allBooks.get(0));
+        model.addAttribute("books", allBooks);
         return "index";
     }
 
     @RequestMapping(path = "/booksby", method = RequestMethod.GET)
     public String queryBooks(Model model, @RequestParam(name = "author", required = false) String author) {
 
-        List<Book> queriedBooks;
-
-        if (author != null) {
-            queriedBooks = filterBooksByAuthor(author);
-        } else {
-            queriedBooks = booklist;
-        }
-
-        model.addAttribute("firstBook", booklist.get(0));
-        model.addAttribute("books", booklist);
+        model.addAttribute("firstBook", service.getBooklist().get(0));
+        model.addAttribute("books", service.buildFilterBooks(author));
         return "index";
     }
 
-    private List<Book> filterBooksByAuthor(String author) {
-        return booklist.stream()
-                .filter(book -> book.getAuthor().equals(author))
-                .collect(Collectors.toList());
+    @RequestMapping(path = "/booksby2", method = RequestMethod.GET)
+    public String queryBooksTwo() {
+        return "one";
     }
+
+    @RequestMapping(path = "/booksby", method = RequestMethod.POST)
+    public String queryBooksForm(Model model, @RequestParam(name = "author") String author) {
+        model.addAttribute("firstBook", service.getBooklist().get(0));
+        model.addAttribute("books", service.buildFilterBooks(author));
+        return "index";
+    }
+
 }

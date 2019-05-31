@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>New Book</title>
+    <meta charset="utf-8" />
 </head>
 <body>
 
+<div>
+    <form action="#" th:action="@{/booksby}"  method="post">
+        <label>Title</label>
+        <input type="text" name="author">
+        <button type="submit">Save</button>
+    </form>
+</div>
 </body>
 </html>
