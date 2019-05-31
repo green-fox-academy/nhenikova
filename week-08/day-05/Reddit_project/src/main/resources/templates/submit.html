@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/static/styles.css"/>
+    <title>Reddit Posts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Trending posts</h1>
+<br>
+<div class="container">
+    <form th:action="@{}" th:object="${}" method="POST">
+        <span th:text="${}"></span>
+        <div class="input-group">
+            <input type="text" class="form-control" th:field="*{title}" th:placeholder="${todo.getTitle()}">
+            <div class="input-group">
+                <div class="input-group-text">
+                    <input type="checkbox" th:checked="${todo.isUrgent()}?'checked'" id="urgent">
+                    <label for="urgent" class="form-check-label">Urgent</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-group-text">
+                    <input type="checkbox" name="isDone" th:checked="${todo.isDone()}?'checked'" id="done">
+                    <label for="done" class="form-check-label">Done</label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-info">Edit</button>
+        <a href="/todo/list" class="btn btn-danger">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
