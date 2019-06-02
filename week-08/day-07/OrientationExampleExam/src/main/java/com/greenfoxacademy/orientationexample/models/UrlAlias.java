@@ -1,5 +1,6 @@
 package com.greenfoxacademy.orientationexample.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,7 +16,7 @@ public class UrlAlias {
     private String secretCode;
 
     public UrlAlias() {
-
+        generateSecretCode();
     }
 
     public String getUrl() {
