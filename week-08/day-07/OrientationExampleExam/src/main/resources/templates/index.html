@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>URLAlias</title>
+</head>
+<body>
+    <h3>My Page</h3>
+    <form th:action="@{save-link}" method="post"}
+    <label for="url">URL</label>
+    <input id="url" type="text">
+    <label for="alies">Alies</label>
+    <input id="alies" type="text">
+
+    <button>Submit</button>
+    </form>
+</body>
+</html>
