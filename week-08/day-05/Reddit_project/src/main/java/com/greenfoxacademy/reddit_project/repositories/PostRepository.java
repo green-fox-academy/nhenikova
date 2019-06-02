@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-    @Query(value = "SELECT post FROM Post post ORDER BY post.score DESC")
-    List<Post> getOrderedPosts();
+//    @Query(value = "SELECT post FROM Post post ORDER BY post.score DESC")
+//    List<Post> getOrderedPosts();
 }
