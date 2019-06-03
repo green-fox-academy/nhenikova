@@ -11,7 +11,8 @@ import java.util.Optional;
 public class UrlService {
 
     private UrlAlias itemToDisplay;
-    UrlRepository repo;
+    private UrlRepository repo;
+    private boolean displayMessage;
 
     @Autowired
     public  UrlService(UrlRepository repo) {
@@ -38,4 +39,30 @@ public class UrlService {
     public void setItemToDisplay(UrlAlias itemToDisplay) {
         this.itemToDisplay = itemToDisplay;
     }
+
+    public boolean isDisplayMessage() {
+        return displayMessage;
+    }
+
+    public void setDisplayMessage(boolean displayMessage) {
+        this.displayMessage = displayMessage;
+    }
+
+    public String getMessage() {
+        if(isDisplayMessage()) {
+            return "";
+        } else {
+            if (isAlreadyStored(itemToDisplay.getAlias())) {
+                return "Your alias is already in use!"; //stored
+            } else {
+                return "Your URL is aliased to " + itemToDisplay.getAlias() + " and your secret code is " + itemToDisplay.getSecretCode() + " .";
+                //not stored item, show a message
+            }
+        }
+    }
+
+    public String isStored() {
+    }
+
+
 }
