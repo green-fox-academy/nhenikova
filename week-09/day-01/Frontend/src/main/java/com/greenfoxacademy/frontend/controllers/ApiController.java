@@ -1,9 +1,11 @@
 package com.greenfoxacademy.frontend.controllers;
 
+import com.greenfoxacademy.frontend.models.AppendAToString;
 import com.greenfoxacademy.frontend.models.Doubling;
 import com.greenfoxacademy.frontend.models.ErrorMessage;
 import com.greenfoxacademy.frontend.models.Greeter;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,6 +34,11 @@ public class ApiController {
         } else {
             return new Greeter(name, title);
         }
+    }
+
+    @GetMapping("/appenda/{appendable}")
+    public Object appendA(@PathVariable("appendable") String appendable) {
+        return new AppendAToString(appendable);
     }
 
 
