@@ -2,9 +2,9 @@ package com.greenfoxacademy.frontend.models;
 
 public class ErrorMessage {
 
-    public String errorMessage;
+    public String error;
 
-    public ErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public ErrorMessage(String error) {
+        this.error = error;
     }
 }
