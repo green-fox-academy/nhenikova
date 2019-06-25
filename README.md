@@ -6,6 +6,9 @@ Below you can find several links to my repositories:
 https://github.com/nhenikova/git-lesson-repository 
 https://github.com/nhenikova/patchwork 
 
+Here is the link for my P2P chat app:
+https://github.com/nhenikova/p2p-chat
+
 My github repository for workshop exercises: 
 https://github.com/green-fox-academy/nhenikova
 
